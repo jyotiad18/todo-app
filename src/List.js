@@ -10,7 +10,7 @@ function List({ tasks, status, onCheckClick, onDeleteClick}) {
 						<div className="detail__left">
 							<input className="list__check" type="checkbox"
 								onClick={() => { onCheckClick(l.id) }}
-								checked={status === 2}
+								defaultChecked={status === 2}
 							/>
 							<h1 className={`list__title ${status === 2 ? 'list__title__cross' : ''} `}>{l.taskDetail}</h1>
 						</div>
