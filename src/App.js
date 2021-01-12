@@ -33,8 +33,7 @@ function App() {
   }
 
   const onClickStatus = (type) => {
-    setStatus(type);
-    getAllTask(type);
+    setStatus(type);   
   }
 
   const getAllTask = (status) => {
@@ -43,7 +42,7 @@ function App() {
 
   useEffect(() => {
     getAllTask(status);
-  }, [])
+  }, [ status ])
   
   const onCheckClick = async(id) => {
     await completeTask(id);
